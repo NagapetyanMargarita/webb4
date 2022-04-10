@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // Удаляем куку, указывая время устаревания в прошлом.
     setcookie('save', '', 100000);
     // Если есть параметр save, то выводим сообщение пользователю.
-    $messages[] = 'Спасибо, результаты сохранены.';
+    $messages[] = 'Данные сохранены.';
   }
 
   // Складываем признак ошибок в массив.
@@ -38,27 +38,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // Удаляем куку, указывая время устаревания в прошлом.
     setcookie('name_error', '', 100000);
     // Выводим сообщение.
-    $messages[] = '<div>Заполните имя.</div>';
+    $messages[] = '<div>Введите имя!</div>';
   }
   if ($errors['email']) {
     setcookie('email_error', '', 100000);
-    $messages[] = '<div>Некорректный email.</div>';
+    $messages[] = '<div>Некорректный email!</div>';
   }
   if ($errors['date']) {
     setcookie('date_error', '', 100000);
-    $messages[] = '<div>Выберите год рождения.</div>';
+    $messages[] = '<div>Выберите дату!</div>';
   }
   if ($errors['gender']) {
     setcookie('gender_error', '', 100000);
-    $messages[] = '<div>Выберите пол.</div>';
+    $messages[] = '<div>Выберите пол!</div>';
   }
   if ($errors['limbs']) {
     setcookie('limbs_error', '', 100000);
-    $messages[] = '<div>Выберите количество конечностей.</div>';
+    $messages[] = '<div>Выберите количество конечностей!</div>';
   }
   if ($errors['checkbox']) {
     setcookie('checkbox_error', '', 100000);
-    $messages[] = '<div>Поставьте галочку.</div>';
+    $messages[] = '<div>Поставьте галочку!</div>';
   }
 
   // Складываем предыдущие значения полей в массив, если есть.
@@ -154,9 +154,9 @@ else {
   }
 
   // Сохранение в базу данных.
-  $user = 'u46502';
-  $pass = '3119750';
-  $db = new PDO('mysql:host=localhost;dbname=u46502', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+  $user = 'u46981';
+  $pass = '3843607';
+  $db = new PDO('mysql:host=localhost;dbname=u46981', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 
   // Подготовленный запрос. Не именованные метки.
   try {
