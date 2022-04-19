@@ -33,16 +33,16 @@
     <form id="form" action="" method="POST">
     <div class="form-group">
     <legend for="username" style="color: black;">Имя:</legend>
-      <input type="text" name="name" class="pole" <?php if ($errors['name']) {print 'class="group error"';} else print 'class="group"'; ?> value="<?php print $values['name']; ?>">
+      <input type="text" name="name"  <?php if ($errors['name']) {print 'class="pole error"';} else print 'class="pole"'; ?> value="<?php print $values['name']; ?>">
 </div>
       <div class="form-group">
       <legend for="email" style="color: black;">E-mail:</legend>
-      <input type="text" name="email"class="pole" <?php if ($errors['email']) {print 'class="group error';} else print 'class="group"'; ?> value="<?php print $values['email']; ?>">
+      <input type="text" name="email" <?php if ($errors['email']) {print 'class="pole error';} else print 'class="pole"'; ?> value="<?php print $values['email']; ?>">
 </div>
 <br>
 <div class="form-group">
     <legend for="date"class="pole" style="color: black;">Дата рождения:</legend>
-      <input type="date" id="date" size="3" name="date" <?php if ($errors['date']) {print 'class="group error"';} else print 'class="group"';?> value="<?php print $values['date']; ?>">
+      <input type="date" id="date" size="3" name="date" <?php if ($errors['date']) {print 'class="pole error"';} else print 'class="pole"';?> value="<?php print $values['date']; ?>">
       </div>
       <br>
       <fieldset class="form-group">
